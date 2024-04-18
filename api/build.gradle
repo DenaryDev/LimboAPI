@@ -52,13 +52,16 @@ tasks.register("javadocJar", Jar) {
 publishing() {
   repositories() {
     maven {
-      credentials {
-        setUsername(System.getenv("ELYTRIUM_MAVEN_USERNAME"))
-        setPassword(System.getenv("ELYTRIUM_MAVEN_PASSWORD"))
-      }
+      //credentials {
+      //    setUsername(System.getenv("PUBLISH_USERNAME"))
+      //    setPassword(System.getenv("PUBLISH_PASSWORD"))
+      //}
+      credentials(PasswordCredentials.class)
 
-      setName("elytrium-repo")
-      setUrl("https://maven.elytrium.net/repo/")
+      //setName("elytrium-repo")
+      //setUrl("https://maven.elytrium.net/repo/")
+      setName("activmine")
+      setUrl("https://repo.activmine.ru/thirdparty")
     }
   }
 

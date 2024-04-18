@@ -24,9 +24,13 @@ allprojects() {
   repositories() {
     mavenCentral()
 
+    //maven() {
+    //  setName("elytrium-repo")
+    //  setUrl("https://maven.elytrium.net/repo/")
+    //}
     maven() {
-      setName("elytrium-repo")
-      setUrl("https://maven.elytrium.net/repo/")
+      setName("activmine")
+      setUrl("https://repo.activmine.ru/public/")
     }
     maven() {
       setName("papermc-repo")
@@ -58,7 +62,7 @@ allprojects() {
     }
   }
 }
-
+//
 String getCurrentShortRevision() {
   OutputStream outputStream = new ByteArrayOutputStream()
   exec {
